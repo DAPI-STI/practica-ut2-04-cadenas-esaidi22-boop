@@ -10,11 +10,9 @@ Devuelve una cadena con el nombre repetido n veces, una por línea.
 
 Si n <= 0, devolvemos cadena vacía.
 """
-
 def repeat_name(name: str, n: int) -> str:
     """Devuelve el nombre repetido n veces, cada uno en una línea."""
     if n <= 0:
         return ""
     return "\n".join([name] * n)
 
-print(repeat_name("Bachir", 3))
