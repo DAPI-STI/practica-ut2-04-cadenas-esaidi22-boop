@@ -15,4 +15,12 @@ coste total (precio * unidades) con 8 enteros y 2 decimales
 def format_product(name: str, price: float, units: int) -> str:
     """Devuelve una descripción de producto formateada con anchuras fijas."""
     # TODO: usa f-strings y formatos tipo {price:9.2f}, {units:03d}, {total:11.2f}
-    raise NotImplementedError("Implementa format_product(name, price, units)")
+total = price * units
+    return (
+        f"Nombre: {name}\n"
+        f"Precio unitario: {price:8.2f} €\n"
+        f"Unidades: {units:03d}\n"
+        f"Coste total: {total:10.2f} €"
+    )
+result = format_product("Leche", 1.5, 12)
+print(result)

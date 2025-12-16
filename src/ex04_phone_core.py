@@ -6,12 +6,17 @@ Ejemplo: "+34-913724710-56" -> "913724710"
 """
 
 def phone_core(s: str) -> str:
-    """
-    Recibe el teléfono como cadena y devuelve solo la parte central.
-    Requisitos mínimos (si no se cumplen, lanza ValueError):
-    - Debe haber exactamente 3 partes separadas por "-".
-    - La primera parte debe comenzar por "+" (prefijo).
-    - La parte central debe ser numérica.
-    """
-    # TODO: usa .strip(), .split("-") y validaciones con .isdigit() y startswith("+")
-    raise NotImplementedError("Implementa phone_core(s)")
+    s = s.strip()
+    partes = s.split("-")
+    if len(partes) != 3:
+        raise ValueError
+    if not partes[0].startswith("+"):
+        raise ValueError
+    if not partes[1].isdigit():
+        raise ValueError
+    return partes[1]
+
+print("EX04:")
+telefono = "+34-913724710-56"
+print("Número central:", phone_core(telefono))
+print("-" * 40)
