@@ -7,4 +7,6 @@ La función devolverá una tupla:
 
 
 def name_upper_and_length(name: str) -> tuple[str, int]:
-    raise NotImplementedError("error")
+    nombre_mayus = name.upper()
+    letras_sin_espacios = len(name.replace(" ", ""))
+    return nombre_mayus, letras_sin_espacios

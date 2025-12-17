@@ -17,20 +17,20 @@ def emphasize_vowel(phrase: str, vowel: str) -> str:
     - Comprueba que vowel es un solo carácter y está en "aeiou" (en minúscula).
     - Recorre la frase carácter a carácter y construye una nueva cadena.
     """
-    # TODO: validar y transformar
-    minuscula = vowel.lower()
-    vocal = ("a", "e", "i", "o", "u")
+  def emphasize_vowel(phrase: str, vowel: str) -> str:
     if len(vowel) != 1:
-        raise ValueError("La vocal es más de 1 cáracter")
-    
-    if minuscula not in vocal:
-        raise ValueError("La letra introducida no es una vocal")
-    
-    frase = ""
+        raise ValueError("La vocal debe ser un solo carácter")
 
+    v = vowel.lower()
+    if v not in "aeiou":
+        raise ValueError("La letra introducida no es una vocal")
+
+    resultado = []
     for char in phrase:
-        if char.lower() == minuscula:
-            frase += char.upper()
+        if char.lower() == v:
+            resultado.append(char.upper())
         else:
-            frase += char
-    return frase
+            resultado.append(char)
+
+    return "".join(resultado)
+
