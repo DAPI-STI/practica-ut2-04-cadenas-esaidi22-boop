@@ -11,15 +11,15 @@ La función:
 """
 def format_product(name: str, price: float, units: int) -> str:
     """
-    Devuelve una descripción del producto con anchuras fijas:
-    - precio unitario: 6 enteros + 2 decimales (total 9)
+    Formatea un producto con:
+    - precio unitario: 6 enteros + 2 decimales
     - unidades: 3 dígitos con ceros
-    - coste total: 8 enteros + 2 decimales (total 11)
+    - coste total: 8 enteros + 2 decimales
     """
     total = price * units
     return (
         f"Nombre: {name}\n"
-        f"Precio unitario: {price:9.2f} €\n"
+        f"Precio unitario: {price:09.2f} €\n"
         f"Unidades: {units:03d}\n"
         f"Coste total: {total:011.2f} €"
     )
