@@ -8,5 +8,8 @@ Recibe una cadena tipo "pan, leche, huevos".
 Devuelve una lista con ["pan", "leche", "huevos"], sin espacios sobrantes.
 """
 def split_products(csv_line: str) -> list[str]:
-    """Devuelve una lista de productos sin espacios extra a partir de una línea CSV simple."""
+    """
+    Recibe una cadena tipo "pan, leche, huevos" y devuelve 
+    una lista ["pan", "leche", "huevos"] sin espacios extra.
+    """
     return [item.strip() for item in csv_line.split(",")]
