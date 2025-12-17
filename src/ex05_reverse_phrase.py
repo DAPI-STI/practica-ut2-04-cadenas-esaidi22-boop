@@ -1,10 +1,12 @@
 """
 Ejercicio 5: escribir una frase y mostrarla invertida (carácter a carácter).
 """
-def reverse_phrase(s: str) -> str:
-    return s[::-1]
-print(reverse_phrase("Hola mundo"))
 
+def reverse_phrase(s: str) -> str:
+    """Devuelve la frase invertida (carácter a carácter)."""
+    # TODO: usa slicing con paso negativo: s[::-1]
+    revertir = (s[::-1])
+    return(revertir)
 
 
 
