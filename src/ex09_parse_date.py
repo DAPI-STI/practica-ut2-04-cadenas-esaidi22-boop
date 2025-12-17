@@ -21,17 +21,12 @@ def parse_date(date_str: str) -> tuple[int, int, int]:
         year = int(parts[2])
     except ValueError:
         raise ValueError("Día, mes y año deben ser números enteros")
-    
     if not (1 <= day <= 31):
         raise ValueError("Día fuera de rango (1-31)")
     if not (1 <= month <= 12):
-        raise ValueError("Mes fuera de rango (1-12)")
-    
+        raise ValueError("Mes fuera de rango (1-12)")  
     return day, month, year
-
-
 fechas = ["09/12/2025", "9/1/2025"]
-
 for f in fechas:
     d, m, a = parse_date(f)
     print(f"Fecha: {f} -> Día: {d}, Mes: {m}, Año: {a}")
