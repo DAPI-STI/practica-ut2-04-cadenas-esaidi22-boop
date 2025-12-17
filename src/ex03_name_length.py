@@ -6,4 +6,5 @@ La función devolverá una tupla:
 """
 
 
-#def name_upper_and_length(name: str) -> tuple[str, int]:
+def name_upper_and_length(name: str) -> tuple[str, int]:
+    raise NotImplementedError("error")
